@@ -1,4 +1,4 @@
-# url imports
+#- coding: utf-8
 from BeautifulSoup import BeautifulSoup
 import cookielib
 import re
@@ -62,14 +62,14 @@ class Correios():
         })        
         return [self._parse_linha_tabela(linha) for linha in linhas]
 
-    def _detalhe(self, posicao=1):
-        """Retorna o resultado detalhado"""
+    def detalhe(self, posicao=0):
+        """Retorna o detalhe de um CEP da última lista de resultados"""
         handle = self._url_open('detalheCEPAction.do', {'Metodo': 'detalhe',
                                                         'TipoCep': 2,
-                                                        'Posicao': posicao,
+                                                        'Posicao': posicao + 1,
                                                         'CEP': None})
-        html = handle.read()        
-        return self._parse_detalhe(html)    
+        html = handle.read()
+        return self._parse_detalhe(html)
         
     def consulta(self, endereco, primeiro=False):
         """Consulta e retorna detalhe do primeiro resultado"""
@@ -87,6 +87,6 @@ class Correios():
         html = h.read()
         
         if primeiro:
-            return self._detalhe(1)
+            return self.detalhe()
         else:
             return self._parse_tabela(html)

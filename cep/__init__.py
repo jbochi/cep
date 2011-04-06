@@ -33,29 +33,31 @@ class Correios():
 
         return handle
 
-    def _detalhe(self, posicao=1):
-        """Retorna o resultado detalhado"""
-        handle = self._url_open('detalheCEPAction.do', {'Metodo': 'detalhe',
-                                                        'TipoCep': 2,
-                                                        'Posicao': posicao,
-                                                        'CEP': None})
-        html = handle.read()
+
+    def _parse_detalhe(self, html):
         soup = BeautifulSoup(html.decode('ISO-8859-1'))
 
         value_cells = soup.findAll('td', attrs={'class': 'value'})
         values = [cell.firstText(text=True) for cell in value_cells]
         localidade, uf = values[2].split('/')
         values_dict = {
-         'Logradouro': values[0],
-         'Bairro': values[1],
-         'Localidade': localidade,
-         'UF': uf,
-         'CEP': values[3]
+            'Logradouro': values[0],
+            'Bairro': values[1],
+            'Localidade': localidade,
+            'UF': uf,
+            'CEP': values[3]
         }
-        
         return values_dict
-        
 
+    def _detalhe(self, posicao=1):
+        """Retorna o resultado detalhado"""
+        handle = self._url_open('detalheCEPAction.do', {'Metodo': 'detalhe',
+                                                        'TipoCep': 2,
+                                                        'Posicao': posicao,
+                                                        'CEP': None})
+        html = handle.read()        
+        return self._parse_detalhe(html)
+        
     def consulta(self, endereco):
         """Consulta e retorna detalhe do primeiro resultado"""
         h = self._url_open('consultaEnderecoAction.do', {

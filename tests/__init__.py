@@ -8,7 +8,7 @@ from cep import Correios
 DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
 
 class TestIntegration(unittest.TestCase):
-    def test_resultado_cep_conhecido(self):
+    def test_resultado_cep_conhecido(self, primeiro=True):
         c = Correios(proxy='10.138.15.10:8080')
         r = c.consulta('91370000')
         self.assertEquals(r['CEP'], '91370-000')
@@ -18,20 +18,27 @@ class TestIntegration(unittest.TestCase):
         self.assertEquals(r['Logradouro'], u'Rua Alberto Silva - até 965/966')
 
 class TestParse(unittest.TestCase):
+    def setUp(self):
+        self.c = Correios()
+
     def pega_conteudo_arquivo(self, nome):
         arquivo = os.path.join(DATA_PATH, nome)
         f = open(arquivo, 'r')
         html = f.read()
         f.close()
-        return html    
+        return html
 
     def test_parse_cep_conhecido(self):
         html = self.pega_conteudo_arquivo('exemplo_resultado.html')
-        c = Correios()
-        r = c._parse_detalhe(html)
+        r = self.c._parse_detalhe(html)
         self.assertEquals(r['CEP'], '22631-004')
         self.assertEquals(r['Localidade'], 'Rio de Janeiro')
         self.assertEquals(r['Bairro'], 'Barra da Tijuca')
         self.assertEquals(r['UF'], 'RJ')
         self.assertEquals(r['Logradouro'], u'Avenida das Américas - '
                                            u'de 3979 a 5151 - lado ímpar')
+                                           
+    def test_parse_nao_existente(self):
+        html = self.pega_conteudo_arquivo('exemplo_lista_nao_encontrado.html')
+        r = self.c._parse_tabela(html)
+        self.assertEquals(r, [])

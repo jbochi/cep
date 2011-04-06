@@ -47,7 +47,10 @@ class Correios():
             'UF': uf,
             'CEP': values[3]
         }
-        return values_dict
+        return values_dict              
+        
+    def _parse_tabela(self, html):
+        return []
 
     def _detalhe(self, posicao=1):
         """Retorna o resultado detalhado"""
@@ -56,9 +59,9 @@ class Correios():
                                                         'Posicao': posicao,
                                                         'CEP': None})
         html = handle.read()        
-        return self._parse_detalhe(html)
+        return self._parse_detalhe(html)    
         
-    def consulta(self, endereco):
+    def consulta(self, endereco, primeiro=False):
         """Consulta e retorna detalhe do primeiro resultado"""
         h = self._url_open('consultaEnderecoAction.do', {
             'relaxation': endereco.encode('ISO-8859-1'),
@@ -72,4 +75,8 @@ class Correios():
         })
         
         html = h.read()
-        return self._detalhe(1)
+        
+        if abrir_primeiro:
+            return self._detalhe(1)
+        else:
+            return self._parse_tabela(html)

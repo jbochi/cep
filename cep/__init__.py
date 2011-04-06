@@ -4,7 +4,7 @@ import cookielib
 import urllib
 import urllib2
 
-URL = 'http://www.buscacep.correios.com.br/servicos/dnec/'
+URL_CORREIOS = 'http://www.buscacep.correios.com.br/servicos/dnec/'
 
 class Correios():
     def __init__(self, proxy=None):
@@ -24,11 +24,11 @@ class Correios():
         if headers == None:
             headers = {}
 
-        if url[:4] != 'http':
-            url = URL + url
-
         headers['User-agent'] = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-        req = urllib2.Request(url, urllib.urlencode(data) if data else None, headers)
+        encoded_data = urllib.urlencode(data) if data else None
+        url = URL_CORREIOS + url
+        
+        req = urllib2.Request(url, encoded_data, headers)
         handle = urllib2.urlopen(req)
 
         return handle
@@ -58,13 +58,16 @@ class Correios():
 
     def consulta(self, endereco):
         """Consulta e retorna detalhe do primeiro resultado"""
-        h = self._url_open('consultaEnderecoAction.do', {'relaxation': endereco.encode('ISO-8859-1'),
-                                                         'TipoCep': 'ALL',
-                                                         'semelhante': 'N',
-                                                         'cfm': 1,
-                                                         'Metodo': 'listaLogradouro',
-                                                         'TipoConsulta': 'relaxation',
-                                                         'StartRow': '1',
-                                                         'EndRow': '10'})
+        h = self._url_open('consultaEnderecoAction.do', {
+            'relaxation': endereco.encode('ISO-8859-1'),
+            'TipoCep': 'ALL',
+            'semelhante': 'N',
+            'cfm': 1,
+            'Metodo': 'listaLogradouro',
+            'TipoConsulta': 'relaxation',
+            'StartRow': '1',
+            'EndRow': '10'
+        })
+        
         html = h.read()
         return self._detalhe(1)

@@ -42,10 +42,6 @@ class Correios():
         html = handle.read()
         soup = BeautifulSoup(html.decode('ISO-8859-1'))
 
-        f = open('debug2_2.html', 'w')
-        f.write(html)
-        f.close()
-        
         value_cells = soup.findAll('td', attrs={'class': 'value'})
         values = [cell.firstText(text=True) for cell in value_cells]
         localidade, uf = values[2].split('/')
@@ -71,8 +67,4 @@ class Correios():
                                                          'StartRow': '1',
                                                          'EndRow': '10'})
         html = h.read()
-        f = open('debug2_1.html', 'w')
-        f.write(html)
-        f.close()
-        
         return self._detalhe(1)

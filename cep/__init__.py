@@ -12,10 +12,7 @@ class Correios():
         cj = cookielib.LWPCookieJar()
         cookie_handler = urllib2.HTTPCookieProcessor(cj)
         if proxy:
-            proxy_handler = urllib2.ProxyHandler({
-                'http': proxy,
-                'https': proxy,
-            })
+            proxy_handler = urllib2.ProxyHandler({'http': proxy})
             opener = urllib2.build_opener(proxy_handler, cookie_handler)
         else:
             opener = urllib2.build_opener(cookie_handler)

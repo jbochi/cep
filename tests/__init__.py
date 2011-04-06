@@ -4,18 +4,23 @@ import unittest
 
 from cep import Correios
 
-
 DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
 
 class TestIntegration(unittest.TestCase):
+    def setUp(self):
+        self.c = Correios()
+        
     def test_resultado_cep_conhecido(self):
-        c = Correios(proxy='10.138.15.10:8080')
-        r = c.consulta('91370000', primeiro=True)
+        r = self.c.consulta('91370000', primeiro=True)
         self.assertEquals(r['CEP'], '91370-000')
         self.assertEquals(r['Localidade'], 'Porto Alegre')
         self.assertEquals(r['Bairro'], 'Vila Ipiranga')
         self.assertEquals(r['UF'], 'RS')
         self.assertEquals(r['Logradouro'], u'Rua Alberto Silva - até 965/966')
+        
+    def test_tabela_resultados_conhecida(self):
+        r = self.c.consulta(u'Rua Alberto Silva - até 965/966')
+        self.assertEquals(r[0]['CEP'], '91370-000')
 
 class TestParse(unittest.TestCase):
     def setUp(self):

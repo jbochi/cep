@@ -7,6 +7,12 @@ USO:
 >>> c.consulta('91370000')
 {'Localidade': u'Porto Alegre', 'Bairro': u'Vila Ipiranga', 'UF': u'RS', 'Logradouro': u'Rua Alberto Silva - at\xe9 965/966', 'CEP': u'91370-000'}
 
+REQUIREMENTS:
+BeautifulSoup
+
 TODO:
 * Testes!!!!
 * Listar resultados da busca, ao invés de abrir o primeiro automaticamente.
+* Docs
+* setup.py
+* PyPi

@@ -1,0 +1,9 @@
+Esta biblioteca acessa o site dos Correios para fazer pesquisa por CEP.
+
+USO:
+
+>>> from cep import Correios
+>>> c = Correios()
+>>> c.consulta('91370000')
+{'Localidade': u'Porto Alegre', 'Bairro': u'Vila Ipiranga', 'UF': u'RS', 'Logradouro': u'Rua Alberto Silva - at\xe9 965/966', 'CEP': u'91370-000'}
+

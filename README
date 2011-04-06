@@ -11,8 +11,6 @@ REQUIREMENTS:
 BeautifulSoup
 
 TODO:
-* Testes!!!!
-* Listar resultados da busca, ao invés de abrir o primeiro automaticamente.
 * Docs
 * setup.py
 * PyPi

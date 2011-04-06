@@ -8,9 +8,9 @@ from cep import Correios
 DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
 
 class TestIntegration(unittest.TestCase):
-    def test_resultado_cep_conhecido(self, primeiro=True):
+    def test_resultado_cep_conhecido(self):
         c = Correios(proxy='10.138.15.10:8080')
-        r = c.consulta('91370000')
+        r = c.consulta('91370000', primeiro=True)
         self.assertEquals(r['CEP'], '91370-000')
         self.assertEquals(r['Localidade'], 'Porto Alegre')
         self.assertEquals(r['Bairro'], 'Vila Ipiranga')
@@ -42,3 +42,13 @@ class TestParse(unittest.TestCase):
         html = self.pega_conteudo_arquivo('exemplo_lista_nao_encontrado.html')
         r = self.c._parse_tabela(html)
         self.assertEquals(r, [])
+        
+    def test_parse_tabela(self):
+        html = self.pega_conteudo_arquivo('exemplo_lista_grande.html')
+        r = self.c._parse_tabela(html)
+        self.assertEquals(len(r), 80)
+        self.assertEquals(r[0]['Logradouro'], 'Rua Alberto Silva')
+        self.assertEquals(r[0]['Bairro'], 'Itaigara')
+        self.assertEquals(r[0]['Localidade'], 'Salvador')
+        self.assertEquals(r[0]['UF'], 'BA')
+        self.assertEquals(r[0]['CEP'], '41815-000')

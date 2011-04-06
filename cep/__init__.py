@@ -1,6 +1,7 @@
 # url imports
 from BeautifulSoup import BeautifulSoup
 import cookielib
+import re
 import urllib
 import urllib2
 
@@ -48,9 +49,18 @@ class Correios():
             'CEP': values[3]
         }
         return values_dict              
+
+    def _parse_linha_tabela(self, tr):
+        values = [cell.firstText(text=True) for cell in tr.findAll('td')]        
+        keys = ['Logradouro', 'Bairro', 'Localidade', 'UF', 'CEP']
+        return dict(zip(keys, values))
         
     def _parse_tabela(self, html):
-        return []
+        soup = BeautifulSoup(html)
+        linhas = soup.findAll('tr', attrs={
+            'onclick': re.compile(r"javascript:detalharCep\('\d+','\d+'\);")
+        })        
+        return [self._parse_linha_tabela(linha) for linha in linhas]
 
     def _detalhe(self, posicao=1):
         """Retorna o resultado detalhado"""
@@ -76,7 +86,7 @@ class Correios():
         
         html = h.read()
         
-        if abrir_primeiro:
+        if primeiro:
             return self._detalhe(1)
         else:
             return self._parse_tabela(html)

@@ -1,0 +1,1076 @@
+ <!DOCTYPE html SYSTEM "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>Correios</title>
+
+<link rel="icon" href="../img/icon.gif" type="image/gif"/>
+
+
+
+ <script type="text/javascript" src='/web/dnec/js/jquery-1.4.2.min.js' language="JavaScript"></script>
+ <script type="text/javascript" src='/web/dnec/js/ddaccordion.js' language="JavaScript"></script>
+ <script type="text/javascript" src='/web/dnec/js/jtabber.js' language="JavaScript"></script>
+ <script type="text/javascript" src='/web/dnec/js/jquery.colorbox-min.js' language="JavaScript"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/colorbox.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/configuracao_geral.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/layout.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/layoutIE6lt.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/layoutIE7.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/layoutIE8.css'/>
+	
+
+</head>
+
+<!--[if lt IE 7]> <body class="ie6"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9]>    <body class="ie8"> <![endif]-->
+<!--[if !IE]>-->  
+
+<body>             <!--<![endif]-->
+
+<div class="back">
+<div class="wrap">
+<div class="header">
+<div class="logo float-left"> <a href="http://www.correios.com.br/default2.cfm" alt="home"><img src='/web/dnec/img/logo.png' alt="Logo Correios"/></a> </div>
+<div class="acesso_rapido">
+<div class="text-right"><a href="http://www.correios.com.br/servicos/falecomoscorreios/default.cfm">Fale com os Correios</a><br/>
+</div>
+<div class="produtosaz">
+<div class="expo" >Correios de A a Z</div>
+<span class="dados abaaz">
+<div class="dadosaz"> <span class="dica"> Escolha pela letra inicial dos nossos produtos, serviços e assuntos<br/>
+
+</span><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm"><b>Todos os itens</b></a><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm?filtro=A/C"><b>Correios de A-C</b></a><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm?filtro=D/F"><b>Correios de D-F</b></a><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm?filtro=G/P"><b>Correios de G-P</b></a><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm?filtro=R/Z"><b>Correios de R-Z</b></a>
+</div>
+</span> </div>
+<span class="float-right">
+<form name="formbusca" id="formbusca" action="resultadoBusca.cfm" method="post" target="_blank" >
+<input type="text" id="criterioDeBusca" name="criterioDeBusca" value="Buscar" onFocus="document.formbusca.criterioDeBusca.value='';">
+
+<a class="btnbuscar" href="javascript:void(0);" class="btnbuscar" onclick="validate_form(document.getElementById('formbusca'));" title="bot&atilde;o Buscar"></a>
+</form>
+</span> <br class="clr"/>
+</div>
+<!-- acesso r&aacute;pido -->
+<br class="clr"/>
+<!--menu Nav -->
+<ul class="mnav text-center">         
+<li class="itemnav"><a href="http://www.buscacep.correios.com.br/" target="_self">Busca CEP</a></li>
+<li class="itemnav"><a href="http://www.correios.com.br/precosPrazos/default.cfm" target="_self">Pre&ccedil;os e Prazos</a></li>
+<li class="itemnav"><a href="http://www.correios.com.br/enderecador/default.cfm" target="_self">Endere&ccedil;ador</a></li>
+
+<li class="itemnav"><a href="http://www.correios.com.br/servicos/agencias/default.cfm" target="_self">Ag&ecirc;ncias</a></li>
+<li class="itemnav"><a href="http://www.correios.com.br/disqueColeta/default.cfm" target="_self">Disque Coleta</a></li>
+<li class="itemnav"><a href="http://www.correios.com.br/servicos/rastreamento/rastreamento.cfm" target="_self">Rastreamento</a></li>
+</ul>
+<!--/menu Nav -->
+</div>
+<div id="nav"> 
+<a referencia="lamina"  id="orelhavoce" class="selected" href="http://www.correios.com.br/default2.cfm">Para Voc&ecirc;</a> 
+<a referencia="lamina2" id="orelhaempresas"  href="http://www.correios.com.br/default2.cfm?lam=2">Para sua Empresa</a> 
+<a referencia="lamina3" id="orelhafornecedores"  href="http://www.correios.com.br/default2.cfm?lam=3">Para Fornecedores</a> 
+
+<a referencia="lamina4" id="orelhacorreios" href="http://www.correios.com.br/default2.cfm?lam=4">Sobre os Correios</a>
+<div class="clr"></div>
+</div>
+<div id="lamina" class="laminas voce">
+<!-- menu horiz -->
+<ul class="iconeaba">
+        <li class="abarotulo  ico1" > <a href="javascript:void(0);" class="icone">Enviar</a>
+          <ul class="submenu">
+            <li> <a href="voce/enviar/Encomendas.cfm" target="_self">Encomendas</a> </li>
+            <li> <a href="voce/enviar/Documentos.cfm" target="_self">Documentos</a> </li>
+            <li> <a href="voce/enviar/Telegramas.cfm" target="_self">Telegrama</a> </li>
+            <li> <a href="voce/enviar/Cartas.cfm" target="_self">Cartas</a> </li>
+            <li> <a href="voce/enviar/valePostalEletronico.cfm" target="_self">Dinheiro</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo  ico2" > <a href="javascript:void(0);" class="icone">Acompanhar</a>
+          <ul class="submenu">
+            <li> <a href="servicos/rastreamento/rastreamento.cfm" target="_blank">Entregas</a> </li>
+            <li> <a href="disqueColeta/consultas/default.cfm" target="_blank">Coletas</a> </li>
+            <li> <a href="http://www.receita.fazenda.gov.br/Aplicacoes/ATCTA/CPF/ConsultaAndamento.asp" target="_blank">CPF - Receita Federal</a> </li>
+            <li> <a href="servicos/achados_perdidos/default.cfm" target="_blank">Documentos perdidos</a> </li>
+            <li> <a href="internacional/cfm/cotacao_moedas.cfm" target="_self">Cotação de moedas</a> </li>
+            <li> <a href="produtos_servicos/catalogo/regionais/reg_detran_ce.cfm" target="_self">Consultas DETRAN-CE</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo  ico3" > <a href="javascript:void(0);" class="icone">Receber</a>
+          <ul class="submenu">
+            <li> <a href="voce/receber/valePostalEletronico.cfm" target="_self">Dinheiro</a> </li>
+            <li> <a href="impFacil/default.cfm" target="_blank">Importações</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo  ico4" > <a href="javascript:void(0);" class="icone">Comprar</a>
+          <ul class="submenu">
+            <li> <a href="http://www.correios.com.br/shopping/correiosonline" target="_blank">Selos e Coleções</a> </li>
+            <li> <a href="http://shopping.correios.com.br/wbm/store/script/wbm2400902p01.aspx?cd_company=ErZW8Dm9i54=&cd_department=3ErDTeanVp8=" target="_blank">Cartões Postais</a> </li>
+            <li> <a href="selos/prod_conveniencia/pre_selados_person/preselado_personal.cfm" target="_blank">Produtos Personalizados</a> </li>
+            <li> <a href="http://shopping.correios.com.br/wbm/store/script/wbm2400902p01.aspx?cd_company=ErZW8Dm9i54=&cd_department=GH4Z6pxe4OE=" target="_blank">Grife Via Postal</a> </li>
+            <li> <a href="http://www.correios.com.br/shopping/correiosonline" target="_blank">Aerogramas e Cartões</a> </li>
+            <li> <a href="http://shopping.correios.com.br/wbm/store/script/wbm2400902p01.aspx?cd_company=ErZW8Dm9i54=&cd_department=R9kapHuB0uA=" target="_blank">Embalagens</a> </li>
+            <li> <a href="http://www.correios.com.br/shopping/correiosonline" target="_blank">Outros Produtos</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo  ico5" > <a href="javascript:void(0);" class="icone">Solicitar</a>
+          <ul class="submenu">
+            <li> <a href="disqueColeta/pedido/default.cfm" target="_self">Coletas</a> </li>
+            <li> <a href="produtos_servicos/certificacaoDigital/default.cfm" target="_self">Certificado Digital</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo text-center ico6"  id="last"> <a class="icone" href="http://shopping.correios.com.br" target="_blank" >CorreiosNet Shopping</a>
+          <ul class="submenu">
+          </ul>
+        </li>
+      </ul>
+<!--  menu horiz -->
+<br class="clr"/>	
+ 		<div class="column1">
+<span class="mver">
+<span class="dominio"></span>
+<h1>Busca CEP</h1>
+<ul>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuEndereco"  target="_self" >CEP ou Endereço</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuLogradouro" target="_self" >CEP por localidade | Logradouro</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCep"  target="_self" >Endereço por CEP</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuLogradouroBairro" target="_self" >CEP de Logradouro por Bairro</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuFaixaCep" target="_self" >Faixas de CEP</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuUnidadeOperacional" target="_self" >CEPs de unidades operacionais</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCepEspecial" target="_self" >CEPs especiais</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCaixaComunitaria" target="_self" >Caixa postal comunitária</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCaixaPostal" target="_self" >CEP de caixa postal</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCepPromocional" target="_self" >CEP promocional</a>
+</ul>
+</span>
+
+		</div><!-- column1 -->
+		<div class="column2">
+			<div class="breadcrumb"></div><!-- breadcrumb -->
+			
+			<div class="content">
+				<div class="tituloimagem"><h1>Busca CEP</h1></div>
+				
+				<div class="ctrlcontent">
+				<p>Faça suas consultas individuais de CEP, destinadas a endereçamentos de objetos de correspondências a serem postadas nos Correios.</p>
+
+             <script language="JavaScript" type="text/javascript">
+                 function detalharCep(posicao, tipoCep) {
+                     document.DetalheGeral.TipoCep.value=tipoCep;
+                     document.DetalheGeral.Posicao.value=posicao;
+                     document.DetalheGeral.submit();
+                 }
+            </script>  
+                                         
+            
+                
+            
+
+                
+                
+                    
+
+
+
+
+
+
+
+
+
+
+<!--Mensagem de Advertencia. Erros nÃ£o fatais -->
+<b>
+
+</b>
+
+<!-- Cabecalho da tabela -->	
+
+
+
+
+
+
+
+
+
+               
+
+
+<b>80 Logradouro(s) </b>
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="gray">
+      <table border="0" cellpadding="1" cellspacing="1">
+        <tr>        
+          <td width="266" align="left" bgcolor="#ECF3F6">
+             <font style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #002A78; font-weight: bolder"> 
+                &nbsp;Logradouro
+             </font>
+          </td>
+          <td width="141" align="left" bgcolor="#ECF3F6">
+              <font style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #002A78; font-weight: bolder">
+                 &nbsp;Bairro
+              </font>
+          </td>
+          <td width="141" align="left" bgcolor="#ECF3F6">
+              <font style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #002A78; font-weight: bolder">
+                 &nbsp;Localidade
+              </font>
+          </td>
+          <td width="29" align="left" bgcolor="#ECF3F6">
+              <font style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #002A78; font-weight: bolder">
+                &nbsp;UF
+              </font>
+          </td>
+          <td width="68" align="left" bgcolor="#ECF3F6">
+              <font style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #002A78; font-weight: bolder">
+                &nbsp;CEP
+              </font>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- Fim cabecalho da tabela -->	
+
+<div> 
+
+
+
+
+
+
+<?xml version = '1.0' encoding = 'ISO-8859-1'?>
+<table border="0" cellspacing="1" cellpadding="5" bgcolor="gray">
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('1','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva</td>
+      <td width="140" style="padding: 2px">Itaigara</td>
+      <td width="140" style="padding: 2px">Salvador</td>
+      <td width="25" style="padding: 2px">BA</td>
+      <td width="65" style="padding: 2px">41815-000</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('2','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto Silva</td>
+      <td width="140" style="padding: 2px">Novo Tempo II</td>
+      <td width="140" style="padding: 2px">Ituiutaba</td>
+      <td width="25" style="padding: 2px">MG</td>
+      <td width="65" style="padding: 2px">38305-208</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('3','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Praça Governador Alberto Silva</td>
+      <td width="140" style="padding: 2px">Centro</td>
+      <td width="140" style="padding: 2px">Eliseu Martins</td>
+      <td width="25" style="padding: 2px">PI</td>
+      <td width="65" style="padding: 2px">64880-000</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('4','6');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">AC Eliseu Martins</td>
+      <td width="140" style="padding: 2px">Centro</td>
+      <td width="140" style="padding: 2px">Eliseu Martins</td>
+      <td width="25" style="padding: 2px">PI</td>
+      <td width="65" style="padding: 2px">64880-970</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('5','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva</td>
+      <td width="140" style="padding: 2px">Tabajaras</td>
+      <td width="140" style="padding: 2px">Teresina</td>
+      <td width="25" style="padding: 2px">PI</td>
+      <td width="65" style="padding: 2px">64067-630</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('6','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Major Alberto Silva</td>
+      <td width="140" style="padding: 2px">Bingen</td>
+      <td width="140" style="padding: 2px">Petrópolis</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">25660-271</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('7','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva</td>
+      <td width="140" style="padding: 2px">Cascadura</td>
+      <td width="140" style="padding: 2px">Rio de Janeiro</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">21310-340</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('8','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva</td>
+      <td width="140" style="padding: 2px">Colubande</td>
+      <td width="140" style="padding: 2px">São Gonçalo</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">24451-020</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('9','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva</td>
+      <td width="140" style="padding: 2px">Lagoa Seca</td>
+      <td width="140" style="padding: 2px">Natal</td>
+      <td width="25" style="padding: 2px">RN</td>
+      <td width="65" style="padding: 2px">59022-300</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('10','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto Silva</td>
+      <td width="140" style="padding: 2px">Promorar</td>
+      <td width="140" style="padding: 2px">Alegrete</td>
+      <td width="25" style="padding: 2px">RS</td>
+      <td width="65" style="padding: 2px">97546-110</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('11','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva - até 965/966</td>
+      <td width="140" style="padding: 2px">Vila Ipiranga</td>
+      <td width="140" style="padding: 2px">Porto Alegre</td>
+      <td width="25" style="padding: 2px">RS</td>
+      <td width="65" style="padding: 2px">91370-000</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('12','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva - de 967/968 ao fim</td>
+      <td width="140" style="padding: 2px">Vila Ipiranga</td>
+      <td width="140" style="padding: 2px">Porto Alegre</td>
+      <td width="25" style="padding: 2px">RS</td>
+      <td width="65" style="padding: 2px">91370-001</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('13','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva</td>
+      <td width="140" style="padding: 2px">Nossa Senhora Aparecida</td>
+      <td width="140" style="padding: 2px">Viamão</td>
+      <td width="25" style="padding: 2px">RS</td>
+      <td width="65" style="padding: 2px">94490-110</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('14','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva Telles</td>
+      <td width="140" style="padding: 2px">Jardim Brogotá</td>
+      <td width="140" style="padding: 2px">Atibaia</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">12954-076</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('15','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto Silva</td>
+      <td width="140" style="padding: 2px">Bom Retiro</td>
+      <td width="140" style="padding: 2px">Santos</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">11090-195</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('16','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Estrada Alberto Silva - lado ímpar</td>
+      <td width="140" style="padding: 2px">Tatetos</td>
+      <td width="140" style="padding: 2px">São Bernardo do Campo</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">09837-205</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('17','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Estrada Alberto Silva - lado par</td>
+      <td width="140" style="padding: 2px">Tatetos</td>
+      <td width="140" style="padding: 2px">São Bernardo do Campo</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">09837-200</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('18','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Avenida Almirante Álvaro Alberto Silva</td>
+      <td width="140" style="padding: 2px">Conjunto Residencial Sa</td>
+      <td width="140" style="padding: 2px">São Paulo</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">02419-040</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('19','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva</td>
+      <td width="140" style="padding: 2px">Imirim</td>
+      <td width="140" style="padding: 2px">São Paulo</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">02466-120</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('20','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silva Albuquerque</td>
+      <td width="140" style="padding: 2px">Jardim Vinhas Do Sol (M</td>
+      <td width="140" style="padding: 2px">São Roque</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">18143-655</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('21','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Pinto da Silva</td>
+      <td width="140" style="padding: 2px">Angola</td>
+      <td width="140" style="padding: 2px">Betim</td>
+      <td width="25" style="padding: 2px">MG</td>
+      <td width="65" style="padding: 2px">32604-098</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('22','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Cabo Alberto Rodrigues da Silva</td>
+      <td width="140" style="padding: 2px">Coração Eucarístico</td>
+      <td width="140" style="padding: 2px">Passos</td>
+      <td width="25" style="padding: 2px">MG</td>
+      <td width="65" style="padding: 2px">37900-600</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('23','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Barbosa da Silva</td>
+      <td width="140" style="padding: 2px">Pedra Branca (Justinópo</td>
+      <td width="140" style="padding: 2px">Ribeirão das Neves</td>
+      <td width="25" style="padding: 2px">MG</td>
+      <td width="65" style="padding: 2px">33925-430</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('24','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Rodrigues da Silva</td>
+      <td width="140" style="padding: 2px">Conjunto Palmital (São </td>
+      <td width="140" style="padding: 2px">Santa Luzia</td>
+      <td width="25" style="padding: 2px">MG</td>
+      <td width="65" style="padding: 2px">33140-100</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('25','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Romão da Silva</td>
+      <td width="140" style="padding: 2px">Mata Grande</td>
+      <td width="140" style="padding: 2px">Sete Lagoas</td>
+      <td width="25" style="padding: 2px">MG</td>
+      <td width="65" style="padding: 2px">35701-185</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('26','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua José Carlos da Silva (Res João Alberto A</td>
+      <td width="140" style="padding: 2px">Caiobá</td>
+      <td width="140" style="padding: 2px">Campo Grande</td>
+      <td width="25" style="padding: 2px">MS</td>
+      <td width="65" style="padding: 2px">79096-800</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('27','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Avenida Alberto Antonio da Silva</td>
+      <td width="140" style="padding: 2px">Jardim Maria Tereza</td>
+      <td width="140" style="padding: 2px">Rondonópolis</td>
+      <td width="25" style="padding: 2px">MT</td>
+      <td width="65" style="padding: 2px">78745-653</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('28','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Professor José Alberto da Silva (Lot.Ilh</td>
+      <td width="140" style="padding: 2px">Ponte dos Carvalhos</td>
+      <td width="140" style="padding: 2px">Cabo de Santo Agostinho</td>
+      <td width="25" style="padding: 2px">PE</td>
+      <td width="65" style="padding: 2px">54580-335</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('29','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua General Costa e Silva</td>
+      <td width="140" style="padding: 2px">Alberto Maia</td>
+      <td width="140" style="padding: 2px">Camaragibe</td>
+      <td width="25" style="padding: 2px">PE</td>
+      <td width="65" style="padding: 2px">54771-780</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('30','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">1ª Travessa General Costa e Silva</td>
+      <td width="140" style="padding: 2px">Alberto Maia</td>
+      <td width="140" style="padding: 2px">Camaragibe</td>
+      <td width="25" style="padding: 2px">PE</td>
+      <td width="65" style="padding: 2px">54771-781</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('31','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">2ª Travessa General Costa e Silva</td>
+      <td width="140" style="padding: 2px">Alberto Maia</td>
+      <td width="140" style="padding: 2px">Camaragibe</td>
+      <td width="25" style="padding: 2px">PE</td>
+      <td width="65" style="padding: 2px">54771-782</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('32','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">3ª Travessa General Costa e Silva</td>
+      <td width="140" style="padding: 2px">Alberto Maia</td>
+      <td width="140" style="padding: 2px">Camaragibe</td>
+      <td width="25" style="padding: 2px">PE</td>
+      <td width="65" style="padding: 2px">54771-783</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('33','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">4ª Travessa General Costa e Silva</td>
+      <td width="140" style="padding: 2px">Alberto Maia</td>
+      <td width="140" style="padding: 2px">Camaragibe</td>
+      <td width="25" style="padding: 2px">PE</td>
+      <td width="65" style="padding: 2px">54771-784</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('34','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Messias da Silva</td>
+      <td width="140" style="padding: 2px">Coelhos</td>
+      <td width="140" style="padding: 2px">Recife</td>
+      <td width="25" style="padding: 2px">PE</td>
+      <td width="65" style="padding: 2px">50060-705</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('35','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Pioneiro Alberto Tanigut</td>
+      <td width="140" style="padding: 2px">Jardim Silvana</td>
+      <td width="140" style="padding: 2px">Campo Mourão</td>
+      <td width="25" style="padding: 2px">PR</td>
+      <td width="65" style="padding: 2px">87309-720</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('36','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Praça Alberto da Silva</td>
+      <td width="140" style="padding: 2px">Cidade Industrial</td>
+      <td width="140" style="padding: 2px">Curitiba</td>
+      <td width="25" style="padding: 2px">PR</td>
+      <td width="65" style="padding: 2px">81305-270</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('37','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto da Silva</td>
+      <td width="140" style="padding: 2px">Jardim Anaterra</td>
+      <td width="140" style="padding: 2px">Londrina</td>
+      <td width="25" style="padding: 2px">PR</td>
+      <td width="65" style="padding: 2px">86073-151</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('38','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Teixeira da Silva</td>
+      <td width="140" style="padding: 2px">Nova Cidade</td>
+      <td width="140" style="padding: 2px">Itaboraí</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">24804-165</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('39','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto Ferreira da Silva - de Qu</td>
+      <td width="140" style="padding: 2px">João Caetano (Itambi)</td>
+      <td width="140" style="padding: 2px">Itaboraí</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">24866-560</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('40','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto Ferreira da Silva - de Qu</td>
+      <td width="140" style="padding: 2px">João Caetano (Itambi)</td>
+      <td width="140" style="padding: 2px">Itaboraí</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">24866-552</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('41','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Servidão Carlos Alberto da Silva Barbosa</td>
+      <td width="140" style="padding: 2px">Itaipava</td>
+      <td width="140" style="padding: 2px">Petrópolis</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">25745-115</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('42','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Silvares</td>
+      <td width="140" style="padding: 2px">Pilares</td>
+      <td width="140" style="padding: 2px">Rio de Janeiro</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">20750-240</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('43','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto da Silva</td>
+      <td width="140" style="padding: 2px">Cosmos</td>
+      <td width="140" style="padding: 2px">Rio de Janeiro</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">23058-390</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('44','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Luiz Alberto da Silva</td>
+      <td width="140" style="padding: 2px">Santa Isabel</td>
+      <td width="140" style="padding: 2px">São Gonçalo</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">24738-230</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('45','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Avenida Prefeito Alberto da Silva Lavinas - </td>
+      <td width="140" style="padding: 2px">Centro</td>
+      <td width="140" style="padding: 2px">Três Rios</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">25804-100</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('46','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Avenida Prefeito Alberto da Silva Lavinas - </td>
+      <td width="140" style="padding: 2px">Centro</td>
+      <td width="140" style="padding: 2px">Três Rios</td>
+      <td width="25" style="padding: 2px">RJ</td>
+      <td width="65" style="padding: 2px">25802-100</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('47','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto Vale Duarte</td>
+      <td width="140" style="padding: 2px">Presidente Costa e Silv</td>
+      <td width="140" style="padding: 2px">Mossoró</td>
+      <td width="25" style="padding: 2px">RN</td>
+      <td width="65" style="padding: 2px">59625-550</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('48','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Murilo Alberto Viana da Silva</td>
+      <td width="140" style="padding: 2px">Potengi</td>
+      <td width="140" style="padding: 2px">Natal</td>
+      <td width="25" style="padding: 2px">RN</td>
+      <td width="65" style="padding: 2px">59108-430</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('49','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Eugênio Alberto Lira Silva</td>
+      <td width="140" style="padding: 2px">Nova Parnamirim</td>
+      <td width="140" style="padding: 2px">Parnamirim</td>
+      <td width="25" style="padding: 2px">RN</td>
+      <td width="65" style="padding: 2px">59150-810</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('50','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Amado Silva</td>
+      <td width="140" style="padding: 2px">Abegay</td>
+      <td width="140" style="padding: 2px">Cruz Alta</td>
+      <td width="25" style="padding: 2px">RS</td>
+      <td width="65" style="padding: 2px">98045-100</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('51','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Almirante Álvaro Alberto da Motta e Silv</td>
+      <td width="140" style="padding: 2px">Menino Deus</td>
+      <td width="140" style="padding: 2px">Porto Alegre</td>
+      <td width="25" style="padding: 2px">RS</td>
+      <td width="65" style="padding: 2px">90160-130</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('52','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Maria José Alberton Silva</td>
+      <td width="140" style="padding: 2px">Santa Tereza</td>
+      <td width="140" style="padding: 2px">Porto Alegre</td>
+      <td width="25" style="padding: 2px">RS</td>
+      <td width="65" style="padding: 2px">90840-540</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('53','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Alameda Vereador Alberto Martins da Silva (P</td>
+      <td width="140" style="padding: 2px">Cassino</td>
+      <td width="140" style="padding: 2px">Rio Grande</td>
+      <td width="25" style="padding: 2px">RS</td>
+      <td width="65" style="padding: 2px">96206-470</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('54','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Wiest</td>
+      <td width="140" style="padding: 2px">Costa e Silva</td>
+      <td width="140" style="padding: 2px">Joinville</td>
+      <td width="25" style="padding: 2px">SC</td>
+      <td width="65" style="padding: 2px">89220-570</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('55','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Capitão Alberto da Silva Leite</td>
+      <td width="140" style="padding: 2px">São Conrado</td>
+      <td width="140" style="padding: 2px">Aracaju</td>
+      <td width="25" style="padding: 2px">SE</td>
+      <td width="65" style="padding: 2px">49043-190</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('56','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Lupércio Lopes da Silva</td>
+      <td width="140" style="padding: 2px">Conjunto Habitacional A</td>
+      <td width="140" style="padding: 2px">Amparo</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">13905-671</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('57','5');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Auto Peças Silva Pinto</td>
+      <td width="140" style="padding: 2px">Alvinópolis</td>
+      <td width="140" style="padding: 2px">Atibaia</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">12942-901</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('58','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Bastazini</td>
+      <td width="140" style="padding: 2px">Núcleo Habitacional Ver</td>
+      <td width="140" style="padding: 2px">Bauru</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">17065-430</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('59','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto da Silva Leda</td>
+      <td width="140" style="padding: 2px">Vila Santista</td>
+      <td width="140" style="padding: 2px">Bauru</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">17054-530</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('60','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Rodrigues da Silva</td>
+      <td width="140" style="padding: 2px">Jardim Nossa Senhora de</td>
+      <td width="140" style="padding: 2px">Bauru</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">17021-450</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('61','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Emílio Alberto Ciniciato</td>
+      <td width="140" style="padding: 2px">Núcleo Habitacional Ver</td>
+      <td width="140" style="padding: 2px">Bauru</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">17065-540</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('62','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Dias da Silva</td>
+      <td width="140" style="padding: 2px">Vila Teixeira</td>
+      <td width="140" style="padding: 2px">Campinas</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">13032-397</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('63','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Doutor Alberto da Silva Ramos</td>
+      <td width="140" style="padding: 2px">Prainha</td>
+      <td width="140" style="padding: 2px">Caraguatatuba</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">11661-760</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('64','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Doutor Alberto Avelino da Cunha e Silva</td>
+      <td width="140" style="padding: 2px">Conjunto Habitacional P</td>
+      <td width="140" style="padding: 2px">Catanduva</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">15816-025</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('65','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Stievani</td>
+      <td width="140" style="padding: 2px">Jardim Costa e Silva</td>
+      <td width="140" style="padding: 2px">Cubatão</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">11500-430</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('66','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Praça Doutor Alberto da Silva Costa</td>
+      <td width="140" style="padding: 2px">Residencial Ana Dorothé</td>
+      <td width="140" style="padding: 2px">Franca</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">14412-214</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('67','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Muniz da Silva</td>
+      <td width="140" style="padding: 2px">Jardim Sumarezinho</td>
+      <td width="140" style="padding: 2px">Hortolândia</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">13185-018</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('68','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Antônio Alberto da Silva (Totó)</td>
+      <td width="140" style="padding: 2px">Vila Residencial São Do</td>
+      <td width="140" style="padding: 2px">Itu</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">13310-622</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('69','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Doutor José Corrêa Pacheco e Silva</td>
+      <td width="140" style="padding: 2px">Jardim Alberto Gomes</td>
+      <td width="140" style="padding: 2px">Itu</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">13311-270</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('70','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto da Silva</td>
+      <td width="140" style="padding: 2px">Jardim Analândia</td>
+      <td width="140" style="padding: 2px">Jandira</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">06608-093</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('71','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Branco da Silva</td>
+      <td width="140" style="padding: 2px">Jardim Pilar</td>
+      <td width="140" style="padding: 2px">Mauá</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">09360-070</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('72','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto da Silva</td>
+      <td width="140" style="padding: 2px">Jardim Oratório</td>
+      <td width="140" style="padding: 2px">Mauá</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">09380-532</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('73','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Gustavo Alberto da Silva</td>
+      <td width="140" style="padding: 2px">Terras de Imoplan</td>
+      <td width="140" style="padding: 2px">Presidente Prudente</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">19044-025</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('74','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto de Faria</td>
+      <td width="140" style="padding: 2px">Jardim Silvana</td>
+      <td width="140" style="padding: 2px">Santo André</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">09120-680</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('75','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto da Silva (Vl Íris)</td>
+      <td width="140" style="padding: 2px">Santa Terezinha</td>
+      <td width="140" style="padding: 2px">São Bernardo do Campo</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">09780-090</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('76','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Avenida Carlos Alberto de Andrade Silva</td>
+      <td width="140" style="padding: 2px">Parque Nova Esperança</td>
+      <td width="140" style="padding: 2px">São José dos Campos</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">12226-150</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('77','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto da Silva Ramos</td>
+      <td width="140" style="padding: 2px">Bosque dos Eucaliptos</td>
+      <td width="140" style="padding: 2px">São José dos Campos</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">12233-840</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('78','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Carlos Alberto Pereira da Silva</td>
+      <td width="140" style="padding: 2px">Parque Nova Esperança</td>
+      <td width="140" style="padding: 2px">São José dos Campos</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">12226-050</td>
+   </tr>
+   <tr bgcolor="#ECF3F6" onclick="javascript:detalharCep('79','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua João Alberto da Silva</td>
+      <td width="140" style="padding: 2px">Loteamento Jardim Helen</td>
+      <td width="140" style="padding: 2px">São José dos Campos</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">12226-697</td>
+   </tr>
+   <tr bgcolor="#C4DEE9" onclick="javascript:detalharCep('80','2');" style="cursor: pointer;">
+      <td width="268" style="padding: 2px">Rua Alberto Soares da Silva</td>
+      <td width="140" style="padding: 2px">Vila Dona Augusta</td>
+      <td width="140" style="padding: 2px">São Paulo</td>
+      <td width="25" style="padding: 2px">SP</td>
+      <td width="65" style="padding: 2px">02322-162</td>
+   </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table width="645">
+  <tr>
+    <td align="left" width="50">
+      
+    </td>
+    <br>
+    <br>
+    
+    <td align="center"  width="545">
+     <font color="#002A78"><b>Para mais informações, clique no registro desejado.</b></font> <font color="White">&nbsp;&nbsp;&nbsp;sac0812&nbsp;&nbsp;&nbsp;</font>
+    </td>
+    
+    <td align="right" width="50">
+        
+    </td>
+  </tr>
+</table>
+<form name="Geral" method="post" action="/servicos/dnec/consultaLogradouroAction.do">
+    <input type="hidden" name='StartRow'   value="">
+    <input type="hidden" name='EndRow'     value="">
+    <input type="hidden" name='Metodo'     value="pagina">
+    <input type="hidden" name="TipoConsulta" value="relaxation"> 
+</form>
+
+
+
+
+  
+<form name="DetalheGeral" action='/servicos/dnec/detalheCEPAction.do' method="post">
+   <input type="hidden" name="Metodo" value="detalhe">
+   <input type="hidden" name="Posicao">
+   <input type="hidden" name="TipoCep">   
+   <input type="hidden" name="CEP"> 
+</form>
+  
+</div>
+                
+                
+                
+                  
+                  
+                  
+                  
+                
+                
+                
+                
+                
+                
+                
+                  
+
+            
+                                          
+			</div><!-- ctrlcontent -->
+			</div><!-- content -->
+			
+		</div><!-- column2 -->
+		<br class="clr"/>
+	</div><!-- laminas -->
+
+	
+
+<div class="footer text-center">
+<div class="mfooter">
+
+    <a href="http://www.correios.com.br/servicos/falecomoscorreios/default.cfm">Fale com os Correios</a> | 
+    <a href="http://www.correios.com.br/produtosaz/produto.cfm?id=C3A9909B-5056-9163-89CEB93799820DE2">Contatos Comerciais</a> | 
+    <a href="http://www.correios.com.br/sobreCorreios/salaImprensa/faleAsCom.cfm">Sala de Imprensa</a> | 
+    <a href="http://www.mc.gov.br/">Minist&eacute;rio das Comunica&ccedil;&otilde;es</a> | 
+    <a href="http://m.correios.com.br/">Correios Mobile</a><br />
+
+</div>
+<div class="copy">
+<a href="http://www.correios.com.br/politica/default.cfm">Pol&iacute;tica de Privacidade e notas legais</a> -  © Copyright 2010 Correios - Todos os direitos reservados
+</div>
+</div>
+<br class="clr"/>
+</div><!-- class="wrap" -->
+</div><!-- class="back" -->
+</body>
+</html>
+<script type="text/javascript">
+$(document).ready(function(){
+$.jtabber({
+mainLinkTag: "#seletorforms select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+hiddenContentClass: "hiddencontent2", // the class of the content you are hiding until the tab is clicked
+showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+showErrors: false, // true/false - if you want errors to be alerted to you
+effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+})
+})
+$(document).ready(function(){
+$.jtabber({
+mainLinkTag: "#seletorforms2 select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+hiddenContentClass: "hiddencontent3", // the class of the content you are hiding until the tab is clicked
+showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+showErrors: false, // true/false - if you want errors to be alerted to you
+effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+})
+})
+$(document).ready(function(){
+$.jtabber({
+mainLinkTag: "#wizard a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+hiddenContentClass: "hiddencontent4", // the class of the content you are hiding until the tab is clicked
+showDefaultTab: 4, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+showErrors: false, // true/false - if you want errors to be alerted to you
+effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+})
+})
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+//Examples of how to assign the ColorBox event to elements
+$("a[rel='example1']").colorbox();
+$("a[rel='example2']").colorbox({transition:"fade"});
+$("a[rel='example3']").colorbox({transition:"none", width:"75%", height:"75%"});
+$("a[rel='example4']").colorbox({slideshow:true});
+$(".example5").colorbox();
+$(".example6").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+$(".example7").colorbox({width:"333px", height:"350px", iframe:true});
+$(".example8").colorbox({width:"50%", inline:true, href:"#inline_example1"});
+$(".example9").colorbox({
+onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+});
+//Example of preserving a JavaScript event for inline calls.
+$("#click").click(function(){ 
+$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+return false;
+});
+});
+</script>
+
+<script type="text/javascript">
+ddaccordion.init({
+headerclass: "expo", //Shared CSS class name of headers group
+contentclass: "dados", //Shared CSS class name of contents group
+revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+animatedefault: false, //Should contents open by default be animated into view?
+persiststate: false, //persist state of opened contents within browser session?
+toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+//do nothing
+},
+onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+}
+})
+ddaccordion.init({
+headerclass: "abarotulo", //Shared CSS class name of headers group
+contentclass: "submenu", //Shared CSS class name of contents group
+revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+animatedefault: false, //Should contents open by default be animated into view?
+persiststate: false, //persist state of opened contents within browser session?
+toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+//do nothing
+},
+onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+}
+})
+/*Agencias*/
+ddaccordion.init({
+headerclass: "expodados", //Shared CSS class name of headers group
+contentclass: "contentexpodados", //Shared CSS class name of contents group
+revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+animatedefault: false, //Should contents open by default be animated into view?
+persiststate: false, //persist state of opened contents within browser session?
+toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+//do nothing
+},
+onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+//do nothing
+}
+})
+function iconeAbaMouseOut(){
+$('ul.iconeaba').mouseleave(function() {
+ddaccordion.collapseall('abarotulo');
+});	
+}
+function produtosAZMouseOut(){
+$('div.produtosaz').mouseleave(function() {
+ddaccordion.collapseall('expo');
+});	
+}
+function produtosAZtrocaMostraTudo(){
+$('#abreTudo').css('display','block');
+$('#abreFecha a').click(function() {
+$("#abreFecha a").toggle();
+});	
+}
+function cbDivMouseOut(){
+$('div.cbDiv').mouseleave(function() {
+ddaccordion.collapseall('expo');
+});	
+}
+$(document).ready(function(){
+iconeAbaMouseOut();
+produtosAZMouseOut();
+produtosAZtrocaMostraTudo();
+cbDivMouseOut();
+});
+</script>

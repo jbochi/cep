@@ -1,0 +1,400 @@
+ <!DOCTYPE html SYSTEM "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>Correios</title>
+
+<link rel="icon" href="../img/icon.gif" type="image/gif"/>
+
+
+
+ <script type="text/javascript" src='/web/dnec/js/jquery-1.4.2.min.js' language="JavaScript"></script>
+ <script type="text/javascript" src='/web/dnec/js/ddaccordion.js' language="JavaScript"></script>
+ <script type="text/javascript" src='/web/dnec/js/jtabber.js' language="JavaScript"></script>
+ <script type="text/javascript" src='/web/dnec/js/jquery.colorbox-min.js' language="JavaScript"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/colorbox.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/configuracao_geral.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/layout.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/layoutIE6lt.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/layoutIE7.css'/>
+<link rel="STYLESHEET" type="text/css" href='/web/dnec/css/layoutIE8.css'/>
+	
+
+</head>
+
+<!--[if lt IE 7]> <body class="ie6"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9]>    <body class="ie8"> <![endif]-->
+<!--[if !IE]>-->  
+
+<body>             <!--<![endif]-->
+
+<div class="back">
+<div class="wrap">
+<div class="header">
+<div class="logo float-left"> <a href="http://www.correios.com.br/default2.cfm" alt="home"><img src='/web/dnec/img/logo.png' alt="Logo Correios"/></a> </div>
+<div class="acesso_rapido">
+<div class="text-right"><a href="http://www.correios.com.br/servicos/falecomoscorreios/default.cfm">Fale com os Correios</a><br/>
+</div>
+<div class="produtosaz">
+<div class="expo" >Correios de A a Z</div>
+<span class="dados abaaz">
+<div class="dadosaz"> <span class="dica"> Escolha pela letra inicial dos nossos produtos, serviços e assuntos<br/>
+
+</span><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm"><b>Todos os itens</b></a><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm?filtro=A/C"><b>Correios de A-C</b></a><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm?filtro=D/F"><b>Correios de D-F</b></a><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm?filtro=G/P"><b>Correios de G-P</b></a><br/>
+<a href="http://www.correios.com.br/produtosaz/default.cfm?filtro=R/Z"><b>Correios de R-Z</b></a>
+</div>
+</span> </div>
+<span class="float-right">
+<form name="formbusca" id="formbusca" action="resultadoBusca.cfm" method="post" target="_blank" >
+<input type="text" id="criterioDeBusca" name="criterioDeBusca" value="Buscar" onFocus="document.formbusca.criterioDeBusca.value='';">
+
+<a class="btnbuscar" href="javascript:void(0);" class="btnbuscar" onclick="validate_form(document.getElementById('formbusca'));" title="bot&atilde;o Buscar"></a>
+</form>
+</span> <br class="clr"/>
+</div>
+<!-- acesso r&aacute;pido -->
+<br class="clr"/>
+<!--menu Nav -->
+<ul class="mnav text-center">         
+<li class="itemnav"><a href="http://www.buscacep.correios.com.br/" target="_self">Busca CEP</a></li>
+<li class="itemnav"><a href="http://www.correios.com.br/precosPrazos/default.cfm" target="_self">Pre&ccedil;os e Prazos</a></li>
+<li class="itemnav"><a href="http://www.correios.com.br/enderecador/default.cfm" target="_self">Endere&ccedil;ador</a></li>
+
+<li class="itemnav"><a href="http://www.correios.com.br/servicos/agencias/default.cfm" target="_self">Ag&ecirc;ncias</a></li>
+<li class="itemnav"><a href="http://www.correios.com.br/disqueColeta/default.cfm" target="_self">Disque Coleta</a></li>
+<li class="itemnav"><a href="http://www.correios.com.br/servicos/rastreamento/rastreamento.cfm" target="_self">Rastreamento</a></li>
+</ul>
+<!--/menu Nav -->
+</div>
+<div id="nav"> 
+<a referencia="lamina"  id="orelhavoce" class="selected" href="http://www.correios.com.br/default2.cfm">Para Voc&ecirc;</a> 
+<a referencia="lamina2" id="orelhaempresas"  href="http://www.correios.com.br/default2.cfm?lam=2">Para sua Empresa</a> 
+<a referencia="lamina3" id="orelhafornecedores"  href="http://www.correios.com.br/default2.cfm?lam=3">Para Fornecedores</a> 
+
+<a referencia="lamina4" id="orelhacorreios" href="http://www.correios.com.br/default2.cfm?lam=4">Sobre os Correios</a>
+<div class="clr"></div>
+</div>
+<div id="lamina" class="laminas voce">
+<!-- menu horiz -->
+<ul class="iconeaba">
+        <li class="abarotulo  ico1" > <a href="javascript:void(0);" class="icone">Enviar</a>
+          <ul class="submenu">
+            <li> <a href="voce/enviar/Encomendas.cfm" target="_self">Encomendas</a> </li>
+            <li> <a href="voce/enviar/Documentos.cfm" target="_self">Documentos</a> </li>
+            <li> <a href="voce/enviar/Telegramas.cfm" target="_self">Telegrama</a> </li>
+            <li> <a href="voce/enviar/Cartas.cfm" target="_self">Cartas</a> </li>
+            <li> <a href="voce/enviar/valePostalEletronico.cfm" target="_self">Dinheiro</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo  ico2" > <a href="javascript:void(0);" class="icone">Acompanhar</a>
+          <ul class="submenu">
+            <li> <a href="servicos/rastreamento/rastreamento.cfm" target="_blank">Entregas</a> </li>
+            <li> <a href="disqueColeta/consultas/default.cfm" target="_blank">Coletas</a> </li>
+            <li> <a href="http://www.receita.fazenda.gov.br/Aplicacoes/ATCTA/CPF/ConsultaAndamento.asp" target="_blank">CPF - Receita Federal</a> </li>
+            <li> <a href="servicos/achados_perdidos/default.cfm" target="_blank">Documentos perdidos</a> </li>
+            <li> <a href="internacional/cfm/cotacao_moedas.cfm" target="_self">Cotação de moedas</a> </li>
+            <li> <a href="produtos_servicos/catalogo/regionais/reg_detran_ce.cfm" target="_self">Consultas DETRAN-CE</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo  ico3" > <a href="javascript:void(0);" class="icone">Receber</a>
+          <ul class="submenu">
+            <li> <a href="voce/receber/valePostalEletronico.cfm" target="_self">Dinheiro</a> </li>
+            <li> <a href="impFacil/default.cfm" target="_blank">Importações</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo  ico4" > <a href="javascript:void(0);" class="icone">Comprar</a>
+          <ul class="submenu">
+            <li> <a href="http://www.correios.com.br/shopping/correiosonline" target="_blank">Selos e Coleções</a> </li>
+            <li> <a href="http://shopping.correios.com.br/wbm/store/script/wbm2400902p01.aspx?cd_company=ErZW8Dm9i54=&cd_department=3ErDTeanVp8=" target="_blank">Cartões Postais</a> </li>
+            <li> <a href="selos/prod_conveniencia/pre_selados_person/preselado_personal.cfm" target="_blank">Produtos Personalizados</a> </li>
+            <li> <a href="http://shopping.correios.com.br/wbm/store/script/wbm2400902p01.aspx?cd_company=ErZW8Dm9i54=&cd_department=GH4Z6pxe4OE=" target="_blank">Grife Via Postal</a> </li>
+            <li> <a href="http://www.correios.com.br/shopping/correiosonline" target="_blank">Aerogramas e Cartões</a> </li>
+            <li> <a href="http://shopping.correios.com.br/wbm/store/script/wbm2400902p01.aspx?cd_company=ErZW8Dm9i54=&cd_department=R9kapHuB0uA=" target="_blank">Embalagens</a> </li>
+            <li> <a href="http://www.correios.com.br/shopping/correiosonline" target="_blank">Outros Produtos</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo  ico5" > <a href="javascript:void(0);" class="icone">Solicitar</a>
+          <ul class="submenu">
+            <li> <a href="disqueColeta/pedido/default.cfm" target="_self">Coletas</a> </li>
+            <li> <a href="produtos_servicos/certificacaoDigital/default.cfm" target="_self">Certificado Digital</a> </li>
+          </ul>
+        </li>
+        <li class="abarotulo text-center ico6"  id="last"> <a class="icone" href="http://shopping.correios.com.br" target="_blank" >CorreiosNet Shopping</a>
+          <ul class="submenu">
+          </ul>
+        </li>
+      </ul>
+<!--  menu horiz -->
+<br class="clr"/>	
+ 		<div class="column1">
+<span class="mver">
+<span class="dominio"></span>
+<h1>Busca CEP</h1>
+<ul>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuEndereco"  target="_self" >CEP ou Endereço</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuLogradouro" target="_self" >CEP por localidade | Logradouro</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCep"  target="_self" >Endereço por CEP</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuLogradouroBairro" target="_self" >CEP de Logradouro por Bairro</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuFaixaCep" target="_self" >Faixas de CEP</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuUnidadeOperacional" target="_self" >CEPs de unidades operacionais</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCepEspecial" target="_self" >CEPs especiais</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCaixaComunitaria" target="_self" >Caixa postal comunitária</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCaixaPostal" target="_self" >CEP de caixa postal</a>
+	<li><a href="/servicos/dnec/menuAction.do?Metodo=menuCepPromocional" target="_self" >CEP promocional</a>
+</ul>
+</span>
+
+		</div><!-- column1 -->
+		<div class="column2">
+			<div class="breadcrumb"></div><!-- breadcrumb -->
+			
+			<div class="content">
+				<div class="tituloimagem"><h1>Busca CEP</h1></div>
+				
+				<div class="ctrlcontent">
+				<p>Faça suas consultas individuais de CEP, destinadas a endereçamentos de objetos de correspondências a serem postadas nos Correios.</p>
+
+             <script language="JavaScript" type="text/javascript">
+                 function detalharCep(posicao, tipoCep) {
+                     document.DetalheGeral.TipoCep.value=tipoCep;
+                     document.DetalheGeral.Posicao.value=posicao;
+                     document.DetalheGeral.submit();
+                 }
+            </script>  
+                                         
+            
+                
+
+ 
+
+
+
+
+
+
+
+
+
+<html lang="pt">
+<head>
+    <title>Erro</title>
+  </head>
+  <body>
+    <font color="black">O endereço informado XLKJALKFJALKFA não foi encontrado.</font>
+    
+    <font color="White">&nbsp;&nbsp;&nbsp;sac0812&nbsp;&nbsp;&nbsp;</font>
+    <br><br>
+
+    
+    
+
+    
+      <a href="/servicos/dnec/index.do"><img border="0" src='/web/dnec/images/voltar.gif'></a>
+    
+
+  </body>  
+</html>
+
+            
+                
+            
+                                          
+			</div><!-- ctrlcontent -->
+			</div><!-- content -->
+			
+		</div><!-- column2 -->
+		<br class="clr"/>
+	</div><!-- laminas -->
+
+	
+
+<div class="footer text-center">
+<div class="mfooter">
+
+    <a href="http://www.correios.com.br/servicos/falecomoscorreios/default.cfm">Fale com os Correios</a> | 
+    <a href="http://www.correios.com.br/produtosaz/produto.cfm?id=C3A9909B-5056-9163-89CEB93799820DE2">Contatos Comerciais</a> | 
+    <a href="http://www.correios.com.br/sobreCorreios/salaImprensa/faleAsCom.cfm">Sala de Imprensa</a> | 
+    <a href="http://www.mc.gov.br/">Minist&eacute;rio das Comunica&ccedil;&otilde;es</a> | 
+    <a href="http://m.correios.com.br/">Correios Mobile</a><br />
+
+</div>
+<div class="copy">
+<a href="http://www.correios.com.br/politica/default.cfm">Pol&iacute;tica de Privacidade e notas legais</a> -  © Copyright 2010 Correios - Todos os direitos reservados
+</div>
+</div>
+<br class="clr"/>
+</div><!-- class="wrap" -->
+</div><!-- class="back" -->
+</body>
+</html>
+<script type="text/javascript">
+$(document).ready(function(){
+$.jtabber({
+mainLinkTag: "#seletorforms select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+hiddenContentClass: "hiddencontent2", // the class of the content you are hiding until the tab is clicked
+showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+showErrors: false, // true/false - if you want errors to be alerted to you
+effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+})
+})
+$(document).ready(function(){
+$.jtabber({
+mainLinkTag: "#seletorforms2 select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+hiddenContentClass: "hiddencontent3", // the class of the content you are hiding until the tab is clicked
+showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+showErrors: false, // true/false - if you want errors to be alerted to you
+effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+})
+})
+$(document).ready(function(){
+$.jtabber({
+mainLinkTag: "#wizard a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+hiddenContentClass: "hiddencontent4", // the class of the content you are hiding until the tab is clicked
+showDefaultTab: 4, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+showErrors: false, // true/false - if you want errors to be alerted to you
+effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+})
+})
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+//Examples of how to assign the ColorBox event to elements
+$("a[rel='example1']").colorbox();
+$("a[rel='example2']").colorbox({transition:"fade"});
+$("a[rel='example3']").colorbox({transition:"none", width:"75%", height:"75%"});
+$("a[rel='example4']").colorbox({slideshow:true});
+$(".example5").colorbox();
+$(".example6").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+$(".example7").colorbox({width:"333px", height:"350px", iframe:true});
+$(".example8").colorbox({width:"50%", inline:true, href:"#inline_example1"});
+$(".example9").colorbox({
+onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+});
+//Example of preserving a JavaScript event for inline calls.
+$("#click").click(function(){ 
+$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+return false;
+});
+});
+</script>
+
+<script type="text/javascript">
+ddaccordion.init({
+headerclass: "expo", //Shared CSS class name of headers group
+contentclass: "dados", //Shared CSS class name of contents group
+revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+animatedefault: false, //Should contents open by default be animated into view?
+persiststate: false, //persist state of opened contents within browser session?
+toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+//do nothing
+},
+onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+}
+})
+ddaccordion.init({
+headerclass: "abarotulo", //Shared CSS class name of headers group
+contentclass: "submenu", //Shared CSS class name of contents group
+revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+animatedefault: false, //Should contents open by default be animated into view?
+persiststate: false, //persist state of opened contents within browser session?
+toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+//do nothing
+},
+onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+}
+})
+/*Agencias*/
+ddaccordion.init({
+headerclass: "expodados", //Shared CSS class name of headers group
+contentclass: "contentexpodados", //Shared CSS class name of contents group
+revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+animatedefault: false, //Should contents open by default be animated into view?
+persiststate: false, //persist state of opened contents within browser session?
+toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+//do nothing
+},
+onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+//do nothing
+}
+})
+function iconeAbaMouseOut(){
+$('ul.iconeaba').mouseleave(function() {
+ddaccordion.collapseall('abarotulo');
+});	
+}
+function produtosAZMouseOut(){
+$('div.produtosaz').mouseleave(function() {
+ddaccordion.collapseall('expo');
+});	
+}
+function produtosAZtrocaMostraTudo(){
+$('#abreTudo').css('display','block');
+$('#abreFecha a').click(function() {
+$("#abreFecha a").toggle();
+});	
+}
+function cbDivMouseOut(){
+$('div.cbDiv').mouseleave(function() {
+ddaccordion.collapseall('expo');
+});	
+}
+$(document).ready(function(){
+iconeAbaMouseOut();
+produtosAZMouseOut();
+produtosAZtrocaMostraTudo();
+cbDivMouseOut();
+});
+</script>

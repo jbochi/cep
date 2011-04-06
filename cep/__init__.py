@@ -34,7 +34,6 @@ class Correios():
 
         return handle
 
-
     def _parse_detalhe(self, html):
         soup = BeautifulSoup(html.decode('ISO-8859-1'))
 
@@ -72,7 +71,7 @@ class Correios():
         return self._parse_detalhe(html)
         
     def consulta(self, endereco, primeiro=False):
-        """Consulta e retorna detalhe do primeiro resultado"""
+        """Consulta site e retorna lista de resultados"""
         h = self._url_open('consultaEnderecoAction.do', {
             'relaxation': endereco.encode('ISO-8859-1'),
             'TipoCep': 'ALL',

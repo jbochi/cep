@@ -17,10 +17,21 @@ class TestIntegration(unittest.TestCase):
         self.assertEquals(r['Bairro'], 'Vila Ipiranga')
         self.assertEquals(r['UF'], 'RS')
         self.assertEquals(r['Logradouro'], u'Rua Alberto Silva - até 965/966')
-        
+
     def test_tabela_resultados_conhecida(self):
         r = self.c.consulta(u'Rua Alberto Silva - até 965/966')
         self.assertEquals(r[0]['CEP'], '91370-000')
+
+    def test_resultados_localidade(self):
+        r = self.c.consulta(u'Alberto Silva', 
+                            uf='RS', 
+                            localidade='Porto Alegre',
+                            tipo='Rua',
+                            numero=54)
+                            
+        self.assertEquals(len(r), 3)
+        self.assertEquals(r[1]['CEP'], '91370-000')        
+
 
 class TestParse(unittest.TestCase):
     def setUp(self):

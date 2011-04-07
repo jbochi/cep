@@ -30,6 +30,6 @@ REQUIREMENTS
 TODO
 ====
 
-* Docs
-* setup.py
-* PyPi
+* Limitar busca por UF e localidade ou bairro
+* Documentação
+* Criar setup.py e registrar no PyPi

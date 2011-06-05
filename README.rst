@@ -27,6 +27,11 @@ REQUIREMENTS
 
 * BeautifulSoup
 
+LICENSE
+=======
+
+* MIT License
+
 TODO
 ====
 

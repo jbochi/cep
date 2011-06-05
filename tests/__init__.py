@@ -8,7 +8,7 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
 
 class TestIntegration(unittest.TestCase):
     def setUp(self):
-        self.c = Correios(proxy='10.138.15.10:8080')
+        self.c = Correios()
         
     def test_resultado_cep_conhecido(self):
         r = self.c.consulta('91370000', primeiro=True)

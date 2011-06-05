@@ -30,6 +30,6 @@ REQUIREMENTS
 TODO
 ====
 
-* Limitar busca por UF e localidade ou bairro
 * Documentação
 * Criar setup.py e registrar no PyPi
+* Hospedar API pública (json/xml)

@@ -36,5 +36,4 @@ TODO
 ====
 
 * Documentação
-* Criar setup.py e registrar no PyPi
 * Hospedar API pública (json/xml)

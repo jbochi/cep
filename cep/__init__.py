@@ -63,7 +63,7 @@ class Correios():
         handle = self._url_open('detalheCEPAction.do', {'Metodo': 'detalhe',
                                                         'TipoCep': 2,
                                                         'Posicao': posicao + 1,
-                                                        'CEP': None})
+                                                        'CEP': ''})
         html = handle.read()
         return self._parse_detalhe(html)
         

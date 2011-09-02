@@ -8,8 +8,8 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), 'data')
 
 class TestIntegration(unittest.TestCase):
     def setUp(self):
-        self.c = Correios()
-        
+        self.c = Correios(proxy='http://87.254.212.121:8080')
+
     def test_resultado_cep_conhecido(self):
         r = self.c.consulta('91370000', primeiro=True)
         self.assertEquals(r['CEP'], '91370-000')
@@ -23,14 +23,18 @@ class TestIntegration(unittest.TestCase):
         self.assertEquals(r[0]['CEP'], '91370-000')
 
     def test_resultados_localidade(self):
-        r = self.c.consulta(u'Alberto Silva', 
-                            uf='RS', 
+        r = self.c.consulta(u'Alberto Silva',
+                            uf='RS',
                             localidade='Porto Alegre',
                             tipo='Rua',
                             numero=54)
-                            
+
         self.assertEquals(len(r), 3)
-        self.assertEquals(r[1]['CEP'], '91370-000')        
+        self.assertEquals(r[1]['CEP'], '91370-000')
+
+    def test_resultados_faixa(self):
+        r = self.c.consulta_faixa('Porto Alegre', 'RS')
+        self.assertEquals(r, ('90000-001', '91999-999'))
 
 
 class TestParse(unittest.TestCase):
@@ -53,12 +57,12 @@ class TestParse(unittest.TestCase):
         self.assertEquals(r['UF'], 'RJ')
         self.assertEquals(r['Logradouro'], u'Avenida das Américas - '
                                            u'de 3979 a 5151 - lado ímpar')
-                                           
+
     def test_parse_nao_existente(self):
         html = self.pega_conteudo_arquivo('exemplo_lista_nao_encontrado.html')
         r = self.c._parse_tabela(html)
         self.assertEquals(r, [])
-        
+
     def test_parse_tabela(self):
         html = self.pega_conteudo_arquivo('exemplo_lista_grande.html')
         r = self.c._parse_tabela(html)
@@ -68,3 +72,18 @@ class TestParse(unittest.TestCase):
         self.assertEquals(r[0]['Localidade'], 'Salvador')
         self.assertEquals(r[0]['UF'], 'BA')
         self.assertEquals(r[0]['CEP'], '41815-000')
+
+    def test_parse_faixa(self):
+        html = self.pega_conteudo_arquivo('exemplo_faixa_cep.html')
+        r = self.c._parse_faixa(html)
+        self.assertEquals(r, ('90000-001', '91999-999'))
+
+    def test_parse_faixa_inexistente(self):
+        html = self.pega_conteudo_arquivo('exemplo_faixa_inexistente.html')
+        r = self.c._parse_faixa(html)
+        self.assertEquals(r, None)
+
+    def test_parse_faixa_inexistente(self):
+        html = self.pega_conteudo_arquivo('exemplo_faixa_cep_unico.html')
+        r = self.c._parse_faixa(html)
+        self.assertEquals(r, '97420-000')

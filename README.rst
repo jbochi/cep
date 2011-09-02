@@ -4,6 +4,13 @@
 
 Esta biblioteca acessa o site dos Correios para fazer pesquisa por CEP.
 
+INSTALAÇÃO
+==========
+
+::
+
+    pip install cep
+
 USO
 ===
 
